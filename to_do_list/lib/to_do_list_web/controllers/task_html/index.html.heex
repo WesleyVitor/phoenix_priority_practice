@@ -1,11 +1,3 @@
 <h1>Hello Index </h1>
 
-<ul>
-    <%= for item <- @tasks do%>
-        <li> <%= item.title %> </li>
-        <li> <%= item.description %> </li>
-        <li> <%= item.due_date %> </li>
-        <li> <%= item.status %> </li>
-    <% end %>
-
-</ul>
+<.list_all_tasks tasks={@tasks} />
