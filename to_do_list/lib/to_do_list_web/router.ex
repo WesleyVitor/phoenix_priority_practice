@@ -20,6 +20,7 @@ defmodule ToDoListWeb.Router do
     get "/", PageController, :home
 
     get "/tasks", TaskController, :index
+    get "/tasks/:id", TaskController, :show
   end
 
   # Other scopes may use custom stacks.

@@ -17,4 +17,19 @@ defmodule ToDoListWeb.TaskHTML do
     </ul>
     """
   end
+
+  attr :task, :string, required: true
+  def show_status(assigns) do
+    ~H"""
+      <%= if @task.status == :done  do%>
+        <p><strong>Status:</strong> Concluída</p>
+      <% end%>
+      <% if @task.status == :pending do %>
+        <p><strong>Status:</strong> Concluída</p>
+      <% end %>
+      <% if @task.status == :pending do %>
+        <p><strong>Status:</strong> Em progresso</p>
+      <% end %>
+    """
+  end
 end
