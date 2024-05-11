@@ -5,7 +5,7 @@ defmodule ToDoList.Board.Task do
     field :title, :string
     field :description, :string
     field :due_date, :date
-    field :status, Ecto.Enum, values: [:pending, :in_progress, :done]
+    field :status, Ecto.Enum, values: [:pending, :in_progress, :done], default: :pending
 
     timestamps()
   end
